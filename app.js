@@ -3,8 +3,9 @@ const express = require("express");
 const app = express();
 const errorHandlerMiddleware = require("./middleware/error-handler");
 const authUser = require("./middleware/auth");
-const port = 4000;
+
 require("dotenv").config();
+const port = process.env.PORT || 3000;
 const authRoute = require("./routes/auth");
 const jobsRoute = require("./routes/job");
 const salarisRoute = require("./routes/salarie");
